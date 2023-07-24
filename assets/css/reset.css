@@ -7,7 +7,7 @@
   --fc-blue: #0009B3;
   --fc-dark: #00044B;
   font-family: 'switzer';
-  font-family: 'Test Söhne';
+  font-family: 'Test Söhne', 'switzer', 'san-serif';
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */

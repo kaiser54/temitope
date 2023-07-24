@@ -29,5 +29,6 @@
     position: relative;
     /* width: 592px; */
     /* will-change: transform; */
+    height: 200vh;
 }
 </style>

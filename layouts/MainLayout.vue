@@ -42,6 +42,12 @@
       <div class="child">
         <div class="page__wrapper">
           <slot />
+          <div class="copyright">
+            <!-- <div class="love">BETA version made with ❤️</div> -->
+            Copyright © 2000 — 2023, Temitope Agboola. To get a quote, <br />
+            please click here. Built using Nuxt with ❤️.
+            <div class="love">BETA version</div>
+          </div>
         </div>
       </div>
     </div>
@@ -102,9 +108,45 @@ export default {};
   color: rgb(209, 213, 219);
 }
 .page__wrapper {
-  padding-top: 88px;
+  padding-block: 88px;
   width: 100%;
   height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
   /* background-color: rgba(32, 33, 35); */
+}
+.page__wrapper::-webkit-scrollbar {
+  display: none;
+}
+.copyright {
+  font-size: 12px;
+  color: #d9d9d9;
+  font-weight: 200;
+}
+.love {
+  /* position: absolute; */
+  /* bottom: 10px; */
+  /* left: 10px; */
+  background-color: rgb(255, 255, 255);
+  background-color: #00dc82;
+  background-color: rgba(32, 33, 35);
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 0.637473px 1.14745px -1.125px,
+    rgba(0, 0, 0, 0.24) 0px 1.93094px 3.4757px -2.25px,
+    rgba(0, 0, 0, 0.192) 0px 5.10423px 9.18761px -3.375px,
+    rgba(0, 0, 0, 0.03) 0px 16px 28.8px -4.5px;
+  opacity: 1;
+  height: 36px;
+  overflow: hidden;
+  padding-inline: 10px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #ffeacf;
+  margin-top: 12px;
 }
 </style>
