@@ -1,0 +1,39 @@
+::selection {
+  background-color: #00dc82;
+  color: white; /* Optional: Change the text color to white for better visibility */
+}
+body {
+  background-color: rgb(19, 21, 23);
+  background-color: rgba(52, 53, 65);
+}
+
+.title__font {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(236, 236, 241);
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #d9d9d9;
+  color: rgba(142,142,160);
+}
+
+.router-link-active.router-link-exact-active {
+  background-color: rgba(64, 65, 79);
+  border: 1px solid rgba(78, 79, 96);
+  color: rgba(236, 236, 241);
+}
+
+.router-link-active.router-link-exact-active .material-symbols-sharp {
+  color: #00dc82;
+}
+
+.material-symbols-sharp {
+  font-size: 18px;
+}
