@@ -4,10 +4,12 @@
       <div class="logo">
         <img src="/ipc.png" alt="" />
       </div>
-      <button class="button">
-        <span>Go to live app</span>
-        <span class="material-symbols-sharp"> arrow_outward </span>
-      </button>
+      <a href="https://ipc-africa.com/" target="_blank">
+        <button class="button">
+          <span>Go to live app</span>
+          <span class="material-symbols-sharp"> arrow_outward </span>
+        </button>
+      </a>
     </div>
     <div class="card__content">
       <div class="card__title card">IPC Africa</div>
@@ -17,7 +19,9 @@
         one sophisticated app.
       </div>
     </div>
-    <img src="" alt="" class="card__image">
+    <div class="img">
+      <img src="/ipcwebsite.png" alt="" class="card__image" />
+    </div>
   </div>
 </template>
 
@@ -35,14 +39,16 @@ export default {};
   display: flex;
   flex: 0 0 auto;
   flex-flow: column nowrap;
-  gap: 24px;
+  gap: 32px;
   /* height: 630px; */
   overflow: hidden;
   padding: 32px;
+  padding-bottom: 0;
   position: relative;
-  /* width: 592px; */
+  max-width: 592px;
+  width: 100%;
   /* will-change: transform; */
-  height: 200vh;
+  /* height: 200vh; */
 }
 .card__logo {
   display: flex;
@@ -73,16 +79,41 @@ export default {};
     rgba(0, 0, 0, 0.24) 0px 1.93094px 3.4757px -2.25px,
     rgba(0, 0, 0, 0.192) 0px 5.10423px 9.18761px -3.375px,
     rgba(0, 0, 0, 0.03) 0px 16px 28.8px -4.5px;
-    transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+a {
+  max-width: 179px;
+  width: 100%;
 }
 .button .material-symbols-sharp {
   font-weight: 700;
 }
 .button:hover {
-    opacity: .9;
-    gap: 20px;
+  opacity: 0.9;
+  gap: 20px;
+}
+.card__title {
+  font-size: 1.4rem;
 }
 .card {
-    color: #d9d9d9;
+  color: #d9d9d9;
+}
+.img {
+  width: 300px; /* Set the desired width of the container */
+  height: 200px; /* Set the desired height of the container */
+  aspect-ratio: 1.155701754385965 / 1;
+  flex: none;
+  height: var(--framer-aspect-ratio-supported, 456px);
+  overflow: visible;
+  position: relative;
+  width: 527px;
+  overflow: hidden; /* Ensure the clipped part of the image is hidden */
+  border-radius: 16px 16px 0 0;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 </style>
