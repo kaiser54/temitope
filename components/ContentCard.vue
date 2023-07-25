@@ -4,7 +4,7 @@
       <div class="logo">
         <img src="/ipc.png" alt="" />
       </div>
-      <a href="https://ipc-africa.com/" target="_blank">
+      <a :href="routePath" target="_blank">
         <button class="button">
           <span>Go to live app</span>
           <span class="material-symbols-sharp"> arrow_outward </span>
@@ -12,21 +12,40 @@
       </a>
     </div>
     <div class="card__content">
-      <div class="card__title card">IPC Africa <span>website</span></div>
+      <div class="card__title card"> {{ cardTitle }} <span>{{ span }}</span></div>
       <div class="snippet card">
-        I built a commerce infrastructure product for Brass that enables users
-        to to build and manage multiple stores both physical and online through
-        one sophisticated app.
+        {{ snippet }}
       </div>
     </div>
     <div class="img">
-      <img src="/ipcwebsite.png" alt="" class="card__image" />
+      <img :src="imageUrl" alt="" class="card__image" />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    routePath: {
+      type: String,
+      required: true,
+    },
+    cardTitle: {
+      type: String,
+      required: true,
+    },
+    span: {
+      type: String,
+    },
+    snippet: {
+      type: String,
+    },
+    imageUrl: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped>
