@@ -1,17 +1,15 @@
 <template>
   <MainLayout>
-     <div class="wrapper">
-       <Projects />
-     </div>
+    <div class="wrapper">
+      <Projects />
+    </div>
   </MainLayout>
- </template>
- 
+</template>
+
+
  <script>
- import MainLayout from "/layouts/MainLayout.vue";
- export default {
-   components: { MainLayout },
- };
- </script>
- 
- <style scoped>
- </style>
+import MainLayout from "/layouts/MainLayout.vue";
+export default {
+  components: { MainLayout },
+};
+</script>
