@@ -96,6 +96,7 @@ svg {
 /* Style the scrollbar track */
 ::-webkit-scrollbar-track {
   background: #e1e1e1; /* Set background color of the scrollbar track */
+  opacity: 0;
 }
 
 /* Style the scrollbar thumb */
