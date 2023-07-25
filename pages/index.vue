@@ -32,6 +32,12 @@ export default {
 </script>
 
 <style>
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 .image__slider {
   display: flex;
   gap: 10px;
