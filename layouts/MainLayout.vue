@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="wrapper">
-      <div class="child">
-        <div class="mainlayout">
+      <div class="child" style="position: relative">
+        <div class="mainlayout" style="position: fixed">
           <div class="branding">
             <Logo />
             <NavBar />
@@ -101,17 +101,11 @@ export default {};
   flex-direction: column;
   gap: 16px;
 }
-.snippet {
-  font-size: 0.86rem;
-  line-height: 1.65;
-  font-weight: 300;
-  color: rgb(209, 213, 219);
-}
 .page__wrapper {
   padding-block: 88px;
   width: 100%;
-  height: 100vh;
-  overflow: auto;
+  /* height: 100vh; */
+  /* overflow: auto; */
   display: flex;
   flex-direction: column;
   gap: 128px;
@@ -148,5 +142,12 @@ export default {};
   font-size: 12px;
   color: #ffeacf;
   margin-top: 12px;
+}
+
+/* Styles for screens with a minimum width of 768px */
+@media screen and (max-width: 1290px) {
+.wrapper {
+  width: 90%;
+}
 }
 </style>

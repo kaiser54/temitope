@@ -1,29 +1,31 @@
 <template>
   <nav>
     <ul>
-      <li>
+      <li class="one">
         <nuxt-link to="/">
           <span class="material-symbols-sharp"> home </span>
           Home
         </nuxt-link>
       </li>
-      <li>
+      <li class="two">
         <nuxt-link to="/about"
           ><span class="material-symbols-sharp"> person </span>About
           me</nuxt-link
         >
       </li>
-      <li>
+      <li class="three">
         <nuxt-link to="/projects"
-          ><span class="material-symbols-sharp"> code </span>Projects</nuxt-link
+          ><span class="material-symbols-sharp"> code </span
+          >Projects</nuxt-link
         >
       </li>
-      <li>
+      <li class="four">
         <nuxt-link to="/others"
           ><span class="material-symbols-sharp"> electric_bolt </span>Other
           stuffs</nuxt-link
         >
       </li>
+      <span class="hover__class"></span>
     </ul>
   </nav>
 </template>
@@ -33,9 +35,8 @@ export default {};
 </script>
 
 <style scoped>
-
 nav {
-  font-size: .7rem;
+  font-size: 0.7rem;
   line-height: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -44,7 +45,7 @@ nav {
 a {
   text-decoration: none;
   color: #d9d9d9;
-  color: rgba(142,142,160);
+  color: rgba(142, 142, 160);
 }
 
 ul {
@@ -70,10 +71,13 @@ ul {
 ul li {
   display: flex;
   flex: 1 0 0px;
+  width: 25%;
   height: 40px;
   border-radius: 10px;
-  transition: .2s ease-in-out;
-  color: rgba(142,142,160);
+  transition: 0.2s ease-in-out;
+  color: rgba(142, 142, 160);
+  position: relative;
+  z-index: 2;
 }
 
 ul li a {
@@ -86,9 +90,37 @@ ul li a {
   gap: 2px;
 }
 
-li:hover {
+.hover__class {
+  height: 40px;
+  width: 23%;
+  margin-left: 0;
+  opacity: 0;
+  border-radius: 12px;
   background-color: rgba(79, 82, 84, 0.288);
+  position: absolute;
+  z-index: 1;
+  transition: .5s ease-in-out;
 }
+.one:hover ~ .hover__class {
+  margin-left: 0%;
+  opacity: 1;
+}
+.two:hover ~ .hover__class {
+  margin-left: 25%;
+  opacity: 1;
+}
+.three:hover ~ .hover__class {
+  margin-left: 50%;
+  opacity: 1;
+}
+.four:hover ~ .hover__class {
+  margin-left: 75%;
+  opacity: 1;
+}
+
+/* li:hover {
+  background-color: rgba(79, 82, 84, 0.288);
+} */
 li:hover a {
   color: rgba(236, 236, 241);
 }

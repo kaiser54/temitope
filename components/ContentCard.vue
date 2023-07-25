@@ -12,7 +12,7 @@
       </a>
     </div>
     <div class="card__content">
-      <div class="card__title card">IPC Africa</div>
+      <div class="card__title card">IPC Africa <span>website</span></div>
       <div class="snippet card">
         I built a commerce infrastructure product for Brass that enables users
         to to build and manage multiple stores both physical and online through
