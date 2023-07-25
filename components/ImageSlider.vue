@@ -30,7 +30,7 @@ export default {
   width: 286px;
   height: 258px;
   border-radius: 24px;
-  overflow: auto;
+  overflow: hidden;
 }
 .square-card::-webkit-scrollbar {
   display: none;
