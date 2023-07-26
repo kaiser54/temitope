@@ -55,6 +55,8 @@ ul {
   align-items: center;
   background-color: rgb(33, 35, 37);
   background-color: rgba(32, 33, 35);
+  background-color: rgb(30,30,30);
+  border: 1px solid rgb(84,84,84);
   border-radius: 16px;
   border-radius: 0.75rem;
   padding: 6px;
@@ -127,7 +129,13 @@ li:hover a {
 
 .router-link-active.router-link-exact-active {
   background-color: rgba(64, 65, 79);
-  border: 1px solid rgba(78, 79, 96);
+  background-color: #151717;
+  /* background-color: rgb(22,22,22); */
+  /* background-color: rgb(41,41,41); */
+  /* background-color: rgba(0, 220, 128, 0.03); */
+  /* background-color: rgb(29,36,33); */
+  /* border: 1px solid rgba(0, 220, 128, 0.08); */
+  /* border: 1px solid rgba(78, 79, 96); */
   color: rgba(236, 236, 241);
 }
 

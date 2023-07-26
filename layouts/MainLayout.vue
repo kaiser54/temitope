@@ -7,10 +7,11 @@
             <Logo />
             <NavBar />
           </div>
-          <div class="hello">
+          <div class="hello glass__border">
             <div class="title__font">
               Hi👋🏾 , I'm Temitope Agboola,<br />
               a frontend developer.
+              <span class="rule"></span>
             </div>
             <div class="hello__msg">
               <p class="snippet">
@@ -59,6 +60,11 @@ export default {};
 </script>
 
 <style scoped>
+.snippet {
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  font-size: 13px;
+}
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -146,8 +152,8 @@ export default {};
 
 /* Styles for screens with a minimum width of 768px */
 @media screen and (max-width: 1290px) {
-.wrapper {
-  width: 90%;
-}
+  .wrapper {
+    width: 90%;
+  }
 }
 </style>

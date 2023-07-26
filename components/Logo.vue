@@ -92,6 +92,10 @@
       </svg>
     </div>
     <div class="logo3 title__font">TA.</div>
+    <div class="glass__border btn">
+      Message me
+      <span class="material-symbols-sharp svg"> arrow_forward </span>
+    </div>
   </div>
 </template>
 
@@ -101,13 +105,46 @@ export default {};
 
 <style scoped>
 .logo {
-    width: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.svg {
+  opacity: 0;
+  margin-left: -24px;
+  transition: 0.7s ease-in-out;
+}
+.btn {
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  color: rgb(236, 236, 241);
+  color: rgba(142, 142, 160);
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.2px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  opacity: 0.9;
+  color: rgb(236, 236, 241);
+  /* gap: 20px; */
+}
+.btn:hover .svg {
+  opacity: 1;
+  margin-left: 20px;
 }
 .logo1 {
-    display: none;
+  display: none;
 }
 .logo2 {
-    display: none;
+  display: none;
 }
 .cls-1 {
   fill: #ffeacf;
