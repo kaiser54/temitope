@@ -4,19 +4,15 @@
       imageUrl="/ipcwebsite.png"
       cardTitle="IPC Africa"
       span="website"
-      snippet="I built a commerce infrastructure product for Brass that enables users
-        to to build and manage multiple stores both physical and online through
-        one sophisticated app."
-        routePath="https://ipc-africa.com/"
+      snippet="a cutting-edge online shopping platform built to deliver an exceptional user experience. Leveraging the power of Nuxt.js and a stack of other advanced technologies, I've created a seamless and feature-rich e-commerce solution that's ready to take your business to the next level."
+      routePath="https://ipc-africa.com/"
     />
     <ContentCard
       imageUrl="/ipcadmin.png"
       cardTitle="IPC Africa"
       span="Admin Web-App"
-      snippet="I built a commerce infrastructure product for Brass that enables users
-        to to build and manage multiple stores both physical and online through
-        one sophisticated app."
-        routePath="https://admin-ipc-nuxt3.vercel.app/"
+      snippet="a cutting-edge online shopping platform built to deliver an exceptional user experience. Leveraging the power of Nuxt.js and a stack of other advanced technologies, I've created a seamless and feature-rich e-commerce solution that's ready to take your business to the next level."
+      routePath="https://admin-ipc-nuxt3.vercel.app/"
     />
   </div>
 </template>

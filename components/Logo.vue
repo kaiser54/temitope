@@ -92,10 +92,15 @@
       </svg>
     </div>
     <div class="logo3 title__font">TA.</div>
-    <div class="glass__border btn">
-      Message me
-      <span class="material-symbols-sharp svg"> arrow_forward </span>
-    </div>
+    <a
+      href="mailto:agboolatemitope070@gmail.com?subject=Regarding%20Contact%20Message"
+      target="_blank"
+    >
+      <div class="glass__border btn">
+        Message me
+        <span class="material-symbols-sharp svg"> arrow_forward </span>
+      </div>
+    </a>
   </div>
 </template>
 

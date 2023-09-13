@@ -1,15 +1,11 @@
 <template>
   <MainLayout>
     <div class="wrapper">
-      <div class="image__slider">
+      <!-- <div class="image__slider">
         <ImageSlider :images="imageUrls" />
-        <ImageSlider :images="imageUrls" />
-      </div>
-      <div class="image__slider">
-        <ImageSlider :images="imageUrls" />
-        <ImageSlider :images="imageUrls" />
-      </div>
+      </div> -->
       <Projects />
+      <ContactVue />
     </div>
   </MainLayout>
 </template>
