@@ -1,0 +1,216 @@
+<template>
+  <!-- LOGO -->
+  <div class="logo">
+    <div class="logo3 title__font">TA. <span>BETA</span></div>
+    <!-- NAV NENU -->
+    <nav>
+      <ul>
+        <li class="one">
+          <nuxt-link to="/home">
+            <span class="material-symbols-sharp"> home </span>
+            Home
+          </nuxt-link>
+        </li>
+        <li class="two">
+          <nuxt-link to="/about"
+            ><span class="material-symbols-sharp"> person </span>About
+            me</nuxt-link
+          >
+        </li>
+        <li class="three">
+          <nuxt-link to="/projects"
+            ><span class="material-symbols-sharp"> code </span
+            >Projects</nuxt-link
+          >
+        </li>
+        <li class="four">
+          <nuxt-link to="/others"
+            ><span class="material-symbols-sharp"> electric_bolt </span>Other
+            stuffs</nuxt-link
+          >
+        </li>
+        <span class="hover__class"></span>
+      </ul>
+    </nav>
+    <!-- CTA -->
+    <a
+      href="mailto:agboolatemitope070@gmail.com?subject=Regarding%20Contact%20Message"
+      target="_blank"
+    >
+      <div class="glass__border btn">
+        Message me
+        <span class="material-symbols-sharp svg"> arrow_forward </span>
+      </div>
+    </a>
+  </div>
+</template>
+  
+  <script>
+export default {};
+</script>
+  
+  <style scoped>
+.logo {
+  position: fixed;
+  z-index: 999;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+.logo3 span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffeacf;
+}
+.svg {
+  opacity: 0;
+  margin-left: -24px;
+  transition: 0.7s ease-in-out;
+}
+.btn {
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  color: rgb(236, 236, 241);
+  color: rgba(142, 142, 160);
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.2px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  opacity: 0.9;
+  color: rgb(236, 236, 241);
+  /* gap: 20px; */
+}
+.btn:hover .svg {
+  opacity: 1;
+  margin-left: 20px;
+}
+
+nav {
+  max-width: 500px;
+  width: 100%;
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #d9d9d9;
+  color: rgba(142, 142, 160);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* background-color: rgb(33, 35, 37);
+  background-color: rgba(32, 33, 35);
+  background-color: rgb(30, 30, 30);
+  border: 1px solid rgb(84, 84, 84); */
+  /* background-color: rgb(0 0 0 / 20%); */
+  border: 1px solid rgb(84, 84, 84);
+  border-radius: 16px;
+  border-radius: 15px;
+  padding: 6px;
+  padding: 0.25rem;
+  height: 50px;
+  align-content: center;
+  justify-content: space-between;
+  max-width: 488px;
+  width: 100%;
+  gap: 6px;
+  gap: 0.25rem;
+  position: relative;
+}
+
+ul li {
+  display: flex;
+  flex: 1 0 0px;
+  width: 25%;
+  height: 40px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  color: rgba(142, 142, 160);
+  position: relative;
+  z-index: 2;
+}
+
+ul li a {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.hover__class {
+  height: 40px;
+  width: 23%;
+  margin-left: 0;
+  opacity: 0;
+  border-radius: 12px;
+  background-color: rgba(79, 82, 84, 0.288);
+  position: absolute;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+.one:hover ~ .hover__class {
+  margin-left: 0%;
+  opacity: 1;
+}
+.two:hover ~ .hover__class {
+  margin-left: 25%;
+  opacity: 1;
+}
+.three:hover ~ .hover__class {
+  margin-left: 50%;
+  opacity: 1;
+}
+.four:hover ~ .hover__class {
+  margin-left: 75%;
+  opacity: 1;
+}
+
+/* li:hover {
+  background-color: rgba(79, 82, 84, 0.288);
+} */
+li:hover a {
+  color: rgba(236, 236, 241);
+}
+
+.router-link-active.router-link-exact-active {
+  background-color: rgba(64, 65, 79);
+  background-color: #151717;
+  background-color: #000000;
+  /* background-color: rgb(22,22,22); */
+  /* background-color: rgb(41,41,41); */
+  /* background-color: rgba(0, 220, 128, 0.03); */
+  /* background-color: rgb(29,36,33); */
+  /* border: 1px solid rgba(0, 220, 128, 0.08); */
+  /* border: 1px solid rgba(78, 79, 96); */
+  color: rgba(236, 236, 241);
+}
+
+.router-link-active.router-link-exact-active .material-symbols-sharp {
+  color: #00dc82;
+}
+
+.material-symbols-sharp {
+  font-size: 18px;
+}
+</style>

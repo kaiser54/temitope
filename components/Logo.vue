@@ -72,7 +72,7 @@
             />
           </g>
         </g>
-      </svg>
+      </svg> beta
     </div>
     <div class="logo2">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.07 12.85">
@@ -90,8 +90,9 @@
           </g>
         </g>
       </svg>
+      beta
     </div>
-    <div class="logo3 title__font">TA.</div>
+    <div class="logo3 title__font">TA. <span>BETA</span></div>
     <a
       href="mailto:agboolatemitope070@gmail.com?subject=Regarding%20Contact%20Message"
       target="_blank"
@@ -114,6 +115,11 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.logo3 span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffeacf;
 }
 .svg {
   opacity: 0;

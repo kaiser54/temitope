@@ -116,6 +116,7 @@ export default {};
   flex-direction: column;
   gap: 128px;
   /* background-color: rgba(32, 33, 35); */
+  max-width: 592px;
 }
 .page__wrapper::-webkit-scrollbar {
   display: none;

@@ -58,7 +58,7 @@ ul {
   background-color: rgb(30,30,30);
   border: 1px solid rgb(84,84,84);
   border-radius: 16px;
-  border-radius: 0.75rem;
+  border-radius: 15px;
   padding: 6px;
   padding: 0.25rem;
   height: 50px;
