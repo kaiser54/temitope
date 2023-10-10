@@ -58,7 +58,9 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(5px);
+  background-color: #161616a3;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(30, 30, 30, 0.628);
 }
 .logo3 span {
   font-size: 13px;

@@ -1,12 +1,5 @@
 <template>
   <div :class="{ animateContainer: isActive }" v-if="isActive">
-    <!-- <span>T</span>
-      <span>r</span>
-      <span>a</span>
-      <span>v</span>
-      <span>e</span>
-      <span>l</span> -->
-
     <div class="cursor"></div>
     <div class="inner-cursor"></div>
   </div>
@@ -46,8 +39,11 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
 .animateContainer {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   &::before {
     content: "";
     background: #fff;
@@ -60,7 +56,6 @@ export default {
     animation: splash 3s cubic-bezier(0.8, 0.2, 0.2, 0.8) forwards;
   }
 }
-
 
 @keyframes splash {
   0% {
@@ -77,12 +72,12 @@ export default {
 }
 .norm {
   opacity: 0;
-  transform: translateY(3%);
-  transition: opacity .5s ease-in, transform 1s;
+  margin-top: 3%;
+  transition: opacity 0.5s ease-in, margin-top 1s;
 }
 
 .norm.fade {
   opacity: 1;
-  transform: translateY(0%);
+  margin-top: 0%;
 }
 </style>

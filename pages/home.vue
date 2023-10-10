@@ -14,6 +14,10 @@
               <div class="machina">END</div>
             </div>
             <div class="machina">DEVELOPER.</div>
+            <div class="cv-cta">
+              <div class="machina">Download CV</div>
+              <span class="material-symbols-sharp"> download </span>
+            </div>
           </div>
         </header>
 
@@ -333,7 +337,11 @@
               </svg>
               <p>Figma</p>
             </div>
-            <div class="box box12" id="box12" style="animation-delay: 1285.71ms">
+            <div
+              class="box box12"
+              id="box12"
+              style="animation-delay: 1285.71ms"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -355,6 +363,42 @@
           </div>
         </div>
       </main>
+      <!-- <main>
+        <div class="hr"></div>
+        <div class="header">
+          <div class="title machina">PROJECTS</div>
+          <div class="snippet sans">
+            Below, you'll find a curated collection of projects that show my
+            unwavering dedication to crafting captivating web journeys, and
+            elevating user experiences
+          </div>
+        </div>
+        <div>
+          <div
+            class="project-wrap"
+            v-for="(project, index) in projects"
+            :key="index"
+          >
+            <div class="project-section">
+              <div class="text-wrap">
+                <div class="header machina">
+                  {{ project?.header || "" }}
+                </div>
+                <p class="snippet">
+                  {{ project?.snippet || "" }}
+                </p>
+              </div>
+              <div class="image-wrap">
+                <img :src="project?.image" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main> -->
+      <!-- <div class="statement">
+        This is a statement with a gradient background.
+      </div> -->
+
       <main>
         <div class="hr"></div>
         <div class="header">
@@ -365,11 +409,41 @@
             elevating user experiences
           </div>
         </div>
-        <section></section>
+        <div class="card-container">
+          <div class="card">
+            <a href="">
+              <div class="card-text">
+                <h3>IPC-Africa</h3>
+              </div>
+              <div class="card-image"></div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="">
+              <div class="card-text">
+                <h3>IPC-Africa</h3>
+              </div>
+              <div class="card-image"></div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="">
+              <div class="card-text">
+                <h3>IPC-Africa</h3>
+              </div>
+              <div class="card-image"></div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="">
+              <div class="card-text">
+                <h3>IPC-Africa</h3>
+              </div>
+              <div class="card-image"></div>
+            </a>
+          </div>
+        </div>
       </main>
-      <div class="statement">
-        This is a statement with a gradient background.
-      </div>
     </div>
   </Layout2>
 </template>
@@ -379,7 +453,31 @@ import Layout2 from "/layouts/Layout2.vue";
 export default {
   components: { Layout2 },
   data() {
-    return {};
+    return {
+      projects: [
+        {
+          id: 1,
+          header: "IPC-Africa",
+          snippet: "",
+          image: "/ipcwebsite.png",
+          url: "/ipcwebsite.png",
+        },
+        {
+          id: 2,
+          header: "IPC-Admin",
+          snippet: "",
+          image: "/ipcadmin.png",
+          url: "/ipcadmin.png",
+        },
+        {
+          id: 1,
+          header: "IPC-web",
+          snippet: "",
+          image: "/ipcadmin.png",
+          url: "/ipcadmin.png",
+        },
+      ],
+    };
   },
   mounted() {
     const options = {
@@ -474,8 +572,82 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-/* styles.css */
-/* styles.css */
+.cv-cta {
+  margin-top: 36px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 28px;
+  color: #f7f8f8;
+  backdrop-filter: blur(12px);
+  /* white-space-collapse: collapse; */
+  /* text-wrap: nowrap; */
+  padding: 0px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-image: initial;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, gap 0.3s ease;
+  &:hover {
+    background-color: #ffffff12;
+    gap: 20px;
+    .material-symbols-sharp {
+      color: white;
+    }
+  }
+  .machina {
+    font-size: 13px !important;
+    font-weight: 500;
+    line-height: 28px;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: calc(calc(calc(1rem * 1.25) * 1.25) * 1.25);
+  width: 100% !important;
+  max-width: 90% !important;
+  margin-inline: auto;
+
+  .card {
+    border: 1px solid transparent;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(84, 84, 84);
+    background: rgba(32, 33, 35);
+    height: 400px;
+
+    a {
+      padding: 1.25rem;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .card-image {
+        background: whitesmoke;
+        width: 100%;
+        height: 300px;
+        order: -1;
+        margin-top: 0;
+        margin-bottom: 0.625rem;
+      }
+    }
+  }
+}
+
 .statement {
   padding: 20px;
   font-size: 24px;
@@ -756,19 +928,38 @@ main {
 .box12 {
   fill: aliceblue;
 }
-
-.not-inner {
+.project-wrap {
+  background: rgb(17, 0, 34);
+  color: white;
+  height: 80vh;
+  position: relative;
   display: flex;
-  gap: 1rem;
-  height: 100%;
-  inset: 0;
-  justify-content: space-between;
-  min-width: 100vw;
-  opacity: 0;
-  position: absolute;
-  scroll-snap-align: start;
-  transition: all 0.5s cubic-bezier(0.7, 0, 0.2, 1) 0ms;
-  visibility: hidden;
+  flex-direction: column;
+  gap: 32px;
+  .project-section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .text-wrap {
+      align-items: center;
+      background: rgb(17, 0, 34);
+      display: flex;
+      flex-basis: 35%;
+      justify-content: center;
+    }
+    .image-wrap {
+      flex-basis: 65%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
 }
 
 @keyframes scale-in {
@@ -781,5 +972,8 @@ main {
     opacity: 1;
     transform: scale(1);
   }
+}
+.material-symbols-sharp {
+  font-size: 18px;
 }
 </style>
