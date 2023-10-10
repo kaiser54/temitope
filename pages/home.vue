@@ -3,6 +3,7 @@
     <div class="wrapper">
       <div class="hero">
         <header>
+          <!-- intro text -->
           <div class="hero-content">
             <div class="machina">FRONT-</div>
             <div class="ma-sa">
@@ -20,7 +21,7 @@
             </div>
           </div>
         </header>
-
+        <!-- about me -->
         <section>
           <div class="content-wrap reveal-on-scroll" ref="revealElement">
             <p class="sans">
@@ -65,6 +66,7 @@
           </div>
           <div class="image slide-in-image" ref="imageElement"></div>
         </section>
+        <!-- infinite scroll animation -->
         <div class="scroll-wrap reveal-on-scroll" ref="animateReveal">
           <div class="scroll-container">
             <div class="scroll-content">
@@ -76,9 +78,10 @@
           </div>
         </div>
       </div>
+      <!-- skills section -->
       <main>
         <div class="hr"></div>
-        <div class="header">
+        <div class="header reveal-on-scroll" ref="revealElement3">
           <div class="title machina">SLILLS</div>
           <div class="snippet sans">
             Allow me to introduce my proficiency in the world of frontend
@@ -400,10 +403,10 @@
       <!-- <div class="statement">
         This is a statement with a gradient background.
       </div> -->
-
+      <!-- projects section -->
       <main>
         <div class="hr"></div>
-        <div class="header">
+        <div class="header reveal-on-scroll" ref="revealElement4">
           <div class="title machina">PROJECTS</div>
           <div class="snippet sans">
             Below, you'll find a curated collection of projects that show my
@@ -411,7 +414,7 @@
             elevating user experiences
           </div>
         </div>
-        <div class="card-container">
+        <div class="card-container reveal-on-scroll" ref="revealElement5">
           <div class="card">
             <a href="">
               <div class="card-text">
@@ -446,6 +449,7 @@
           </div>
         </div>
       </main>
+      <!-- contact section -->
       <main>
         <div class="hr"></div>
         <div class="header">
@@ -469,6 +473,7 @@
           </div>
         </div>
       </main>
+      <!-- footer -->
       <main>
         <div class="hr"></div>
         <div class="header">
@@ -525,10 +530,28 @@ export default {
     revealObserver.observe(this.$refs.revealElement);
 
     const revealObserver2 = new IntersectionObserver(
-      this.handleRevealIntersection2,
+      this.handleRevealIntersection,
       options
     );
     revealObserver2.observe(this.$refs.revealElement2);
+
+    const revealObserver3 = new IntersectionObserver(
+      this.handleRevealIntersection,
+      options
+    );
+    revealObserver3.observe(this.$refs.revealElement3);
+
+    const revealObserver4 = new IntersectionObserver(
+      this.handleRevealIntersection,
+      options
+    );
+    revealObserver4.observe(this.$refs.revealElement4);
+
+    const revealObserver5 = new IntersectionObserver(
+      this.handleRevealIntersection,
+      options
+    );
+    revealObserver5.observe(this.$refs.revealElement5);
 
     const imageObserver = new IntersectionObserver(
       this.handleImageIntersection,
@@ -545,16 +568,6 @@ export default {
 
   methods: {
     handleRevealIntersection(entries) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal"); // Add the 'reveal' class when element is in view
-        } else {
-          entry.target.classList.remove("reveal"); // Remove the 'reveal' class when element is out of view
-        }
-      });
-    },
-
-    handleRevealIntersection2(entries) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("reveal"); // Add the 'reveal' class when element is in view
@@ -933,8 +946,8 @@ main {
 /* assets/css/styles.css */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(20px); /* Initial hidden state */
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(40px); /* Initial hidden state */
+  transition: opacity 0.5s ease, transform 1s ease;
 }
 
 .reveal-on-scroll.reveal {

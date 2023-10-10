@@ -3,18 +3,18 @@
     <div class="name-input">
       <div class="field">
         <label class="sans">Name</label>
-        <input class="input" type="text" name="user_name" />
+        <input required class="input" type="text" name="user_name" />
       </div>
       <div class="field">
         <label class="sans">Email</label>
-        <input class="input" type="email" name="user_email" />
+        <input required class="input" type="email" name="user_email" />
       </div>
     </div>
     <div class="field">
       <label class="sans">Message</label>
       <textarea class="input" name="message"></textarea>
     </div>
-    <input class="btn" type="submit" value="SHOOOOOT" />
+    <input required class="btn" type="submit" value="SHOOOOOT" />
   </form>
 </template>
   
