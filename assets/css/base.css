@@ -63,3 +63,41 @@ button {
   height: 1px;
   background-color: rgb(84,84,84);
 }
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  outline: none;
+
+  height: 48px;
+  width: 100%;
+
+  /* White */
+
+  background: transparent;
+  /* Grey/Grey4 */
+
+  border: 1px solid rgb(84,84,84);
+  border-radius: 8px;
+}
+
+
+
+.input:hover {
+  border-color:  rgb(152, 152, 152);
+}
+
+.input:active,
+.input:focus {
+  border: 2px solid rgb(189, 189, 189);
+}
+
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}

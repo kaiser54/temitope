@@ -29,7 +29,8 @@
               <a href="https://app.ipc-africa.com/">IPC-Africa</a> with a
               passion for crafting exceptional user experiences. I specialize in
               translating design concepts into responsive, interactive, and
-              visually stunning websites.
+              visually stunning websites. <br />
+              ❤️
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.11 93.95">
               <defs class="svg-proprty"></defs>
@@ -363,6 +364,7 @@
           </div>
         </div>
       </main>
+
       <!-- <main>
         <div class="hr"></div>
         <div class="header">
@@ -441,6 +443,38 @@
               </div>
               <div class="card-image"></div>
             </a>
+          </div>
+        </div>
+      </main>
+      <main>
+        <div class="hr"></div>
+        <div class="header">
+          <div class="title machina">LET'S LINK UP</div>
+          <div class="snippet sans">
+            Together, we can transform your ideas into interactive and engaging
+            web applications. Feel free to reach out, and let's start building
+            something amazing!
+          </div>
+        </div>
+        <div class="contact-connect">
+          <div class="connect-content">
+            <h1 class="machina">
+              Have an <br />
+              idea?
+            </h1>
+            <p class="sans">Let's build and scale it!</p>
+          </div>
+          <div class="connect-wrap">
+            <ContactForm />
+          </div>
+        </div>
+      </main>
+      <main>
+        <div class="hr"></div>
+        <div class="header">
+          <div class="title machina">TEMITOPE OLUWASEGUN AGBOOLA.</div>
+          <div class="snippet sans">
+            Thank you for considering me as your <br> frontend website developer. <br> Best regards, ❤️<br> 08100232610.
           </div>
         </div>
       </main>
@@ -645,6 +679,39 @@ export default {
         margin-bottom: 0.625rem;
       }
     }
+  }
+}
+
+.contact-connect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-inline: auto;
+  .connect-content {
+    color: white;
+    .machina {
+      font-size: 500%;
+      line-height: 1;
+      font-weight: 100;
+    }
+    p {
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: 100;
+    }
+  }
+  .connect-wrap {
+    width: 60%;
+    // height: 80vh;
+    border: 1px solid rgb(84, 84, 84);
+    padding: 24px;
+    border-radius: 10px;
+    background: rgba(32, 33, 35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
